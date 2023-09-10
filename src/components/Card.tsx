@@ -14,7 +14,7 @@ const Card = ({ card }: Props) => {
 
     return (
         <article
-            className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg ${rarityClasses.border} ${rarityClasses.background}`}
+            className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
         >
             <div className="flex items-center justify-between gap-2">
                 <h2 className={`font-bold ${rarityClasses.text}`}>
@@ -72,34 +72,6 @@ const Card = ({ card }: Props) => {
             <p className=" text-sm text-slate-400 dark:text-slate-500 line-clamp-2">
                 {card.description}
             </p>
-            {/* <div className="text-xs space-y-1 flex flex-col items-center text-slate-600">
-                {card.clank && (
-                    <p className="col-start-1 flex items-center gap-2">
-                        {card.clank < 0 ? 'Blocks' : 'Generates'}{' '}
-                        {Math.abs(card.clank)}{' '}
-                        <div className="w-3 h-3 rounded-full bg-blue-500" />
-                    </p>
-                )}
-                {card.hazard && (
-                    <p className="col-start-2 flex items-center gap-2">
-                        {card.hazard < 0 ? 'Blocks' : 'Generates'}{' '}
-                        {Math.abs(card.hazard)}
-                        <div className="w-3 h-3 rounded-sm bg-red-400" />
-                    </p>
-                )}
-                {card.treasure && (
-                    <p className="col-start-2 flex items-center gap-2">
-                        + {card.treasure}
-                        <div className="w-3 h-3 rounded-full bg-amber-400" />
-                    </p>
-                )}
-                {card.ember && (
-                    <p className="col-start-2 flex items-center gap-2">
-                        + {card.ember}
-                        <div className="w-3 h-3 rounded-full bg-cyan-400" />
-                    </p>
-                )}
-            </div> */}
         </article>
     );
 };
