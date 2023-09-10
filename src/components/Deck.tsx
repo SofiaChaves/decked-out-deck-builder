@@ -16,6 +16,11 @@ const Deck = () => {
                     <Card key={card.name + index} card={card} />
                 </button>
             ))}
+            {deck.length === 0 && (
+                <p className="text-slate-500">
+                    Your deck is empty, add a card by clicking on a card.
+                </p>
+            )}
         </div>
     );
 };

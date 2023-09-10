@@ -62,8 +62,8 @@ const DeckStats = () => {
                     <span className="text-slate-500 pl-2">{totalHazard}</span>
                 </h3>
                 <div className="flex gap-1">
-                    {[...Array(totalHazard).keys()].map((_) => (
-                        <Hazard key={_} />
+                    {[...Array(Math.abs(totalHazard)).keys()].map((_) => (
+                        <Hazard key={_} filled={totalHazard > 0} />
                     ))}
                 </div>
             </article>
@@ -75,8 +75,8 @@ const DeckStats = () => {
                     <span className="text-slate-500 pl-2">{totalClank}</span>
                 </h3>
                 <div className="flex gap-1">
-                    {[...Array(totalClank).keys()].map((_) => (
-                        <Clank key={_} />
+                    {[...Array(Math.abs(totalClank)).keys()].map((_) => (
+                        <Clank key={_} filled={totalClank > 0} />
                     ))}
                 </div>
             </article>

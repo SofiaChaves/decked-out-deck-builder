@@ -13,9 +13,9 @@ function App() {
                 </h1>
 
                 {/* Grid */}
-                <div className="grid grid-cols-4 gap-16">
+                <div className="grid grid-cols-3 gap-16">
                     {/* List */}
-                    <div className="col-span-3 space-y-5">
+                    <div className="col-span-2 space-y-5">
                         <h1 className="text-2xl font-bold">All Cards</h1>
                         <CardsList />
                     </div>
