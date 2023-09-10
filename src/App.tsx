@@ -19,7 +19,7 @@ function App() {
                 {/* Grid */}
                 <div className="grid md:grid-cols-3 gap-16">
                     {/* List */}
-                    <div className="col-span-2 space-y-5">
+                    <div className="md:col-span-2 space-y-5">
                         <h1 className="text-2xl font-bold">All Cards</h1>
                         <CardsList />
                     </div>
