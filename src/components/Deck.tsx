@@ -18,7 +18,8 @@ const Deck = () => {
             ))}
             {deck.length === 0 && (
                 <p className="text-slate-500">
-                    Your deck is empty, add a card by clicking on a card.
+                    Your deck is empty, try adding a card by clicking on one
+                    from the left hand grid
                 </p>
             )}
         </div>
