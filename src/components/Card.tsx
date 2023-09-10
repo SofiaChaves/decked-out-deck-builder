@@ -1,6 +1,10 @@
 import { Card } from '../types/Card';
 import { Rarity } from '../types/Rarity';
 import Badge from './Badge';
+import Clank from './Clank';
+import Ember from './Ember';
+import Hazard from './Hazard';
+import Treasure from './Treasure';
 
 type Props = {
     card: Card;
@@ -10,7 +14,7 @@ const Card = ({ card }: Props) => {
 
     return (
         <article
-            className={`space-y-2 border-2 py-3 px-4 rounded-lg ${rarityClasses.border} ${rarityClasses.background}`}
+            className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg ${rarityClasses.border} ${rarityClasses.background}`}
         >
             <div className="flex items-center justify-between gap-2">
                 <h2 className={`font-bold ${rarityClasses.text}`}>
@@ -19,35 +23,35 @@ const Card = ({ card }: Props) => {
 
                 <div className="flex gap-2 items-center text-xs">
                     {card.clank && (
-                        <p className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5">
                             {card.clank}
-                            <div className="w-2 h-2 rounded-full bg-blue-500" />
-                        </p>
+                            <Clank />
+                        </div>
                     )}
                     {card.hazard && (
-                        <p className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5">
                             {card.hazard}
-                            <div className="w-2 h-2 rounded-sm bg-red-400" />
-                        </p>
+                            <Hazard />
+                        </div>
                     )}
 
                     {card.treasure && (
-                        <p className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5">
                             {card.treasure}
-                            <div className="w-2 h-2 rounded-full bg-amber-400" />
-                        </p>
+                            <Treasure />
+                        </div>
                     )}
 
                     {card.ember && (
-                        <p className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5">
                             {card.ember}
-                            <div className="w-2 h-2 rounded-full bg-cyan-400" />
-                        </p>
+                            <Ember />
+                        </div>
                     )}
                 </div>
             </div>
 
-            <p className="flex gap-1.5">
+            <div className="flex gap-1.5">
                 {card.permanent && (
                     <Badge
                         backgroundColor="bg-purple-500/30"
@@ -64,7 +68,7 @@ const Card = ({ card }: Props) => {
                         Ethereal
                     </Badge>
                 )}
-            </p>
+            </div>
             <p className=" text-sm text-slate-400 dark:text-slate-500 line-clamp-2">
                 {card.description}
             </p>
