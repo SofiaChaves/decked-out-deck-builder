@@ -147,7 +147,7 @@ export const cards: Card[] = [
     },
     {
         name: 'Haste',
-        description: '',
+        description: '?',
         rarity: Rarity.Rare,
     },
     {
@@ -174,7 +174,7 @@ export const cards: Card[] = [
     },
     {
         name: 'Swagger',
-        description: '',
+        description: '?',
         rarity: Rarity.Rare,
     },
     {
@@ -206,17 +206,17 @@ export const cards: Card[] = [
     },
     {
         name: 'Avalanche',
-        description: '',
+        description: '?',
         rarity: Rarity.Legendary,
     },
     {
         name: 'Glorious Moment',
-        description: '',
+        description: '?',
         rarity: Rarity.Legendary,
     },
     {
         name: 'Beast Master',
-        description: '',
+        description: '?',
         rarity: Rarity.Legendary,
         permanent: true,
     },

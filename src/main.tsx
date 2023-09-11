@@ -6,7 +6,9 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <div className={import.meta.env.DEV ? 'debug-screens' : ''}>
+            <App />
+        </div>
         <Analytics />
     </React.StrictMode>
 );

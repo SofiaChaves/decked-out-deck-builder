@@ -8,24 +8,24 @@ function App() {
     const clearDeck = useDeck((state) => state.clearDeck);
 
     return (
-        <div className={import.meta.env.DEV ? 'debug-screens' : ''}>
-            <div className="container mx-auto p-5">
+        <div className="bg-white/90 text-slate-800 dark:bg-slate-800 dark:text-white">
+            <div className="container p-5 mx-auto">
                 {/* Title */}
-                <h1 className="text-4xl font-bold my-10 mt-5">
+                <h1 className="my-10 mt-5 text-4xl font-bold">
                     Decked Out 2{' '}
                     <span className="text-slate-400">Deck Builder</span>
                 </h1>
 
                 {/* Grid */}
-                <div className="grid md:grid-cols-3 gap-16">
+                <div className="grid gap-16 md:grid-cols-3">
                     {/* List */}
-                    <div className="md:col-span-2 space-y-5">
+                    <div className="space-y-5 md:col-span-2">
                         <h1 className="text-2xl font-bold">All Cards</h1>
                         <CardsList />
                     </div>
 
                     {/* Deck */}
-                    <div className="space-y-12 order-first md:order-last">
+                    <div className="order-first space-y-12 md:order-last">
                         <div className="space-y-5">
                             <h1 className="text-2xl font-bold">
                                 Your Deck Stats
@@ -34,7 +34,7 @@ function App() {
                         </div>
 
                         <div className="space-y-5">
-                            <div className="flex gap-5 items-end justify-between">
+                            <div className="flex items-end justify-between gap-5">
                                 <h1 className="text-3xl font-bold">
                                     Your Deck
                                 </h1>
@@ -53,6 +53,30 @@ function App() {
                     </div>
                 </div>
             </div>
+
+            <footer className="sticky bottom-0 bg-white border-t dark:bg-slate-800 border-slate-300 dark:border-slate-700">
+                <div className="container flex flex-wrap justify-between gap-3 px-5 py-3 mx-auto text-xs lg:text-sm">
+                    <span>{'Made with ❤️ by Sofia Chaves'}</span>
+                    <span>
+                        Find me on{' '}
+                        <a
+                            href="https://www.linkedin.com/in/sofiacps/"
+                            className="underline text-slate-500"
+                        >
+                            LinkedIn
+                        </a>
+                    </span>
+                    <span>
+                        Support this project by giving it a ⭐ on{' '}
+                        <a
+                            href="https://github.com/SofiaChaves"
+                            className="underline text-slate-500"
+                        >
+                            GitHub
+                        </a>
+                    </span>
+                </div>
+            </footer>
         </div>
     );
 }
