@@ -17,7 +17,7 @@ const Card = ({ card, children }: Props) => {
         <article
             className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
         >
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-wrap items-center justify-between gap-2">
                 <h2 className={`font-bold text-left ${rarityClasses.text}`}>
                     {card.name}
                 </h2>
