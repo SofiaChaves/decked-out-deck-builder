@@ -33,9 +33,9 @@ const DeckStats = () => {
             <article className="space-y-1.5 ">
                 <h3 className="font-bold">
                     Treasure
-                    <span className="text-slate-500 pl-2">{totalTreasure}</span>
+                    <span className="pl-2 text-slate-500">{totalTreasure}</span>
                 </h3>
-                <div className="flex gap-1 flex-wrap">
+                <div className="flex flex-wrap gap-1">
                     {[...Array(totalTreasure).keys()].map((_) => (
                         <Treasure key={_} />
                     ))}
@@ -46,9 +46,9 @@ const DeckStats = () => {
             <article className="space-y-1.5 ">
                 <h3 className="font-bold">
                     Embers
-                    <span className="text-slate-500 pl-2">{totalEmbers}</span>
+                    <span className="pl-2 text-slate-500">{totalEmbers}</span>
                 </h3>
-                <div className="flex gap-1">
+                <div className="flex flex-wrap gap-1">
                     {[...Array(totalEmbers).keys()].map((_) => (
                         <Ember key={_} />
                     ))}
@@ -59,9 +59,9 @@ const DeckStats = () => {
             <article className="space-y-1.5">
                 <h3 className="font-bold">
                     Blocked Hazard
-                    <span className="text-slate-500 pl-2">{totalHazard}</span>
+                    <span className="pl-2 text-slate-500">{totalHazard}</span>
                 </h3>
-                <div className="flex gap-1">
+                <div className="flex flex-wrap gap-1">
                     {[...Array(Math.abs(totalHazard)).keys()].map((_) => (
                         <Hazard key={_} filled={totalHazard > 0} />
                     ))}
@@ -72,9 +72,9 @@ const DeckStats = () => {
             <article className="space-y-1.5">
                 <h3 className="font-bold">
                     Blocked Clank
-                    <span className="text-slate-500 pl-2">{totalClank}</span>
+                    <span className="pl-2 text-slate-500">{totalClank}</span>
                 </h3>
-                <div className="flex gap-1">
+                <div className="flex flex-wrap gap-1">
                     {[...Array(Math.abs(totalClank)).keys()].map((_) => (
                         <Clank key={_} filled={totalClank > 0} />
                     ))}
