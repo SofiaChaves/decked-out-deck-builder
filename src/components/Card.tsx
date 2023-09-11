@@ -1,3 +1,4 @@
+import useDeck from '../hooks/useDeck';
 import { Card } from '../types/Card';
 import { Rarity } from '../types/Rarity';
 import Badge from './Badge';
@@ -15,7 +16,7 @@ const Card = ({ card, children }: Props) => {
 
     return (
         <article
-            className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
+            className={`space-y-2 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform select-none hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
         >
             <div className="flex flex-wrap items-center justify-between gap-2">
                 <h2 className={`font-bold text-left ${rarityClasses.text}`}>
