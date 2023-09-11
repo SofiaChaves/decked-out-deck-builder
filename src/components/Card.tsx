@@ -8,8 +8,9 @@ import Treasure from './Treasure';
 
 type Props = {
     card: Card;
+    children?: React.ReactNode;
 };
-const Card = ({ card }: Props) => {
+const Card = ({ card, children }: Props) => {
     const rarityClasses = raritiesClasses[card.rarity];
 
     return (
@@ -21,7 +22,7 @@ const Card = ({ card }: Props) => {
                     {card.name}
                 </h2>
 
-                <div className="flex gap-2 items-center text-xs">
+                <div className="flex items-center gap-2 text-xs">
                     {card.clank && (
                         <div className="flex items-center gap-1.5">
                             {card.clank}
@@ -51,27 +52,27 @@ const Card = ({ card }: Props) => {
                 </div>
             </div>
 
-            <div className="flex gap-1.5">
-                {card.permanent && (
-                    <Badge
-                        backgroundColor="bg-purple-500/30"
-                        textColor="text-purple-700 dark:text-purple-400"
-                    >
-                        Permanent
-                    </Badge>
-                )}
-                {card.ethereal && (
-                    <Badge
-                        backgroundColor="bg-pink-500/30"
-                        textColor="text-pink-600 dark:text-pink-400"
-                    >
-                        Ethereal
-                    </Badge>
-                )}
-            </div>
-            <p className=" text-sm text-slate-400 dark:text-slate-500 line-clamp-2">
-                {card.description}
-            </p>
+            {(card.permanent || card.ethereal) && (
+                <div className="flex gap-1.5">
+                    {card.permanent && (
+                        <Badge
+                            backgroundColor="bg-purple-500/30"
+                            textColor="text-purple-700 dark:text-purple-400"
+                        >
+                            Permanent
+                        </Badge>
+                    )}
+                    {card.ethereal && (
+                        <Badge
+                            backgroundColor="bg-pink-500/30"
+                            textColor="text-pink-600 dark:text-pink-400"
+                        >
+                            Ethereal
+                        </Badge>
+                    )}
+                </div>
+            )}
+            {children}
         </article>
     );
 };

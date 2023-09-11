@@ -6,7 +6,7 @@ const Deck = () => {
     const removeCard = useDeck((state) => state.removeCard);
 
     return (
-        <div className="space-y-5 flex flex-col">
+        <div className="flex flex-col space-y-3">
             {deck.map((card, index) => (
                 <button
                     role="button"
