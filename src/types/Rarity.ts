@@ -3,5 +3,5 @@ export enum Rarity {
     Uncommon = 'Uncommon',
     Rare = 'Rare',
     Legendary = 'Legendary',
-    Unknown = 'Unknown',
+    Gold = 'Gold',
 }

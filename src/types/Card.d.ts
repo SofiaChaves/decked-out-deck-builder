@@ -10,4 +10,5 @@ export type Card = {
     hazard?: number;
     treasure?: number;
     ember?: number;
+    limit: number;
 };

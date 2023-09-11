@@ -1,4 +1,6 @@
+import treasure from '../assets/coin.webp';
+
 const Treasure = () => {
-    return <div className="w-2 h-2 rounded-full bg-amber-400" />;
+    return <img src={treasure} className="w-2.5" />;
 };
 export default Treasure;

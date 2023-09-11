@@ -22,29 +22,29 @@ const Card = ({ card, children }: Props) => {
                     {card.name}
                 </h2>
 
-                <div className="flex items-center gap-2 text-xs">
+                <div className="flex items-center gap-1.5 text-xs min-w-fit">
                     {card.clank && (
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1">
                             {card.clank}
                             <Clank />
                         </div>
                     )}
                     {card.hazard && (
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1">
                             {card.hazard}
                             <Hazard />
                         </div>
                     )}
 
                     {card.treasure && (
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1">
                             {card.treasure}
                             <Treasure />
                         </div>
                     )}
 
                     {card.ember && (
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1">
                             {card.ember}
                             <Ember />
                         </div>
@@ -56,8 +56,8 @@ const Card = ({ card, children }: Props) => {
                 <div className="flex gap-1.5">
                     {card.permanent && (
                         <Badge
-                            backgroundColor="bg-purple-500/30"
-                            textColor="text-purple-700 dark:text-purple-400"
+                            backgroundColor="bg-yellow-500/30"
+                            textColor="text-yellow-700 dark:text-yellow-400"
                         >
                             Permanent
                         </Badge>
@@ -95,13 +95,13 @@ const raritiesClasses = {
         background: 'bg-blue-200/5 dark:bg-blue-600/10',
     },
     [Rarity.Legendary]: {
-        text: 'text-orange-400',
-        border: 'border-orange-500/60',
-        background: 'bg-orange-200/5 dark:bg-orange-600/10',
+        text: 'text-purple-400',
+        border: 'border-purple-500/60',
+        background: 'bg-purple-200/5 dark:bg-purple-600/10',
     },
-    [Rarity.Unknown]: {
-        text: 'text-slate-400 dark:text-slate-500',
-        border: 'border-slate-300 dark:border-slate-600',
-        background: 'bg-slate-300/5 dark:bg-slate-600/10',
+    [Rarity.Gold]: {
+        text: 'text-amber-400',
+        border: 'border-yellow-500/60',
+        background: 'bg-yellow-200/5 dark:bg-yellow-600/10',
     },
 };

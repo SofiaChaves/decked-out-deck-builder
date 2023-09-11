@@ -7,24 +7,28 @@ export const cards: Card[] = [
         description: 'Blocks 2 Clank.',
         rarity: Rarity.Common,
         clank: 2,
+        limit: 5,
     },
     {
         name: 'Stability',
         description: 'Blocks 2 Hazard.',
         rarity: Rarity.Common,
         hazard: 2,
+        limit: 5,
     },
     {
         name: 'Ember Seeker',
         description: 'Generates 2 Frost Ember drops.',
         rarity: Rarity.Common,
         ember: 2,
+        limit: 5,
     },
     {
         name: 'Treasure Hunter',
         description: 'Generates 4 Treasure drops.',
         rarity: Rarity.Common,
         treasure: 4,
+        limit: 5,
     },
     {
         name: 'Moment of Clarity',
@@ -36,24 +40,28 @@ export const cards: Card[] = [
         hazard: 2,
         treasure: 4,
         ember: 2,
+        limit: 5,
     },
     {
         name: 'Evasion',
         description: 'Blocks 4 Clank.',
         rarity: Rarity.Uncommon,
         clank: 4,
+        limit: 3,
     },
     {
         name: 'Tread Lightly',
         description: 'Blocks 4 Hazard.',
         rarity: Rarity.Uncommon,
         hazard: 4,
+        limit: 3,
     },
     {
         name: 'Frost Focus',
         description: 'Generates 4 Frost Ember Drops.',
         rarity: Rarity.Uncommon,
         ember: 4,
+        limit: 3,
     },
     {
         name: 'Smash And Grab',
@@ -61,19 +69,23 @@ export const cards: Card[] = [
         rarity: Rarity.Uncommon,
         clank: -2,
         treasure: 13,
+        limit: 3,
     },
     {
         name: 'Adrenaline Rush',
         description:
-            'Every heartbeat for the next 20 seconds Generates 1 Treasure drop.',
+            'Adds 1 Hazard. Every heartbeat for the next 20 seconds Generates 1 Treasure drop.',
         rarity: Rarity.Uncommon,
         treasure: 1,
+        hazard: -1,
+        limit: 3,
     },
     {
         name: 'Bounding Strides',
         description: 'Blocks 2 Hazard and Gives 2 minutes of Jump Boost II.',
         rarity: Rarity.Uncommon,
         hazard: 2,
+        limit: 3,
     },
     {
         name: 'Reckless Charge',
@@ -82,11 +94,22 @@ export const cards: Card[] = [
         rarity: Rarity.Uncommon,
         hazard: -2,
         ember: 10,
+        limit: 3,
     },
     {
         name: 'Sprint',
         description: 'Gives 60 seconds of Sprint II.',
         rarity: Rarity.Uncommon,
+        limit: 3,
+    },
+    {
+        name: 'Nimble Looting',
+        description:
+            'Blocks 1 Clank, Generates 2 Treasure. Until Clank increases, each clanked blocked generates 2 Treasure..',
+        rarity: Rarity.Uncommon,
+        clank: 1,
+        treasure: 2,
+        limit: 3,
     },
     {
         name: 'Beast Sense',
@@ -94,11 +117,13 @@ export const cards: Card[] = [
             'Generates 1 Clank and the next three cards that are played Ring the Bell, showing where the Ravagers are.',
         rarity: Rarity.Uncommon,
         clank: -1,
+        limit: 3,
     },
     {
         name: 'Second Wind',
         description: 'Gives 15 seconds of Regeneration II and Sprint II.',
         rarity: Rarity.Uncommon,
+        limit: 3,
     },
     {
         name: 'Loot and Scoot',
@@ -106,6 +131,7 @@ export const cards: Card[] = [
             'Generates 7 Treasure drops and Gives 15 seconds of Sprint II.',
         rarity: Rarity.Uncommon,
         treasure: 7,
+        limit: 3,
     },
     {
         name: 'Quickstep',
@@ -113,6 +139,7 @@ export const cards: Card[] = [
             "Blocks 2 Clank, Gives 15 seconds of Sprint II, and Quickdraw's 1 card.",
         rarity: Rarity.Uncommon,
         clank: 2,
+        limit: 3,
     },
     {
         name: 'Suit Up',
@@ -121,6 +148,7 @@ export const cards: Card[] = [
         rarity: Rarity.Uncommon,
         permanent: true,
         clank: -1,
+        limit: 1,
     },
     {
         name: 'Eerie Silence',
@@ -129,6 +157,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         clank: 8,
         hazard: 2,
+        limit: 3,
     },
     {
         name: 'Silent Runner',
@@ -137,6 +166,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         permanent: true,
         clank: 1,
+        limit: 1,
     },
     {
         name: 'Cold Snap',
@@ -144,11 +174,13 @@ export const cards: Card[] = [
             'Generates 3 Hazard, but for the next 3 cards played, Frost Ember drops double.',
         rarity: Rarity.Rare,
         hazard: -3,
+        limit: 3,
     },
     {
         name: 'Haste',
-        description: '?',
+        description: 'Cards are drawn 10% faster for the remainder of the run',
         rarity: Rarity.Rare,
+        limit: 3,
     },
     {
         name: 'Eyes On The Prize',
@@ -157,6 +189,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         clank: -2,
         hazard: -3,
+        limit: 3,
     },
     {
         name: 'Speed Runner',
@@ -164,6 +197,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         permanent: true,
         ember: 8,
+        limit: 1,
     },
     {
         name: 'Chill Step',
@@ -171,11 +205,16 @@ export const cards: Card[] = [
             'Any future Sneak cards played Generate 2 Frost Ember drops.',
         rarity: Rarity.Rare,
         ember: 2,
+        limit: 3,
     },
     {
         name: 'Swagger',
-        description: '?',
+        description:
+            'Generates 10 Treasure and 10 Frost Ember drops, but adds 2 Stumble cards into the deck.',
+        treasure: 10,
+        ember: 10,
         rarity: Rarity.Rare,
+        limit: 3,
     },
     {
         name: 'Dungeon Repairs',
@@ -183,6 +222,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         clank: -1,
         hazard: 7,
+        limit: 3,
     },
     {
         name: 'Fuzzy Bunny Slippers',
@@ -191,6 +231,7 @@ export const cards: Card[] = [
         rarity: Rarity.Rare,
         permanent: true,
         clank: 4,
+        limit: 1,
     },
     {
         name: 'Deepfrost',
@@ -198,49 +239,70 @@ export const cards: Card[] = [
             'Generates 6 Frost Ember drops for each staircase unlocked.',
         rarity: Rarity.Rare,
         ember: 6,
+        limit: 3,
     },
     {
         name: 'Brilliance',
         description: 'QuickDraw 2 cards.',
         rarity: Rarity.Rare,
+        limit: 3,
     },
     {
         name: 'Avalanche',
         description: '?',
         rarity: Rarity.Legendary,
+        limit: 1,
     },
     {
         name: 'Glorious Moment',
         description: '?',
         rarity: Rarity.Legendary,
+        limit: 1,
     },
     {
         name: 'Beast Master',
         description: '?',
         rarity: Rarity.Legendary,
         permanent: true,
+        limit: 1,
+    },
+    {
+        name: 'Cash Cow',
+        description: '?',
+        rarity: Rarity.Legendary,
+        limit: 1,
+    },
+    {
+        name: 'Boots of Swiftness',
+        description: '?',
+        rarity: Rarity.Legendary,
+        permanent: true,
+        limit: 1,
     },
     {
         name: 'Pay To Win',
         description: 'Generates 10 Frost Ember drops',
-        rarity: Rarity.Unknown,
+        rarity: Rarity.Gold,
         ethereal: true,
         ember: 10,
+        limit: 1,
     },
     {
         name: 'Tactical Approach',
         description: 'Blocks 4 Clank but gives 4 Treasure drops',
-        rarity: Rarity.Unknown,
+        rarity: Rarity.Gold,
         permanent: true,
         ethereal: true,
         clank: 4,
         treasure: 4,
+        limit: 1,
     },
     {
         name: 'Porkchop Power',
         description: 'Grants 2 cooked porkchops at the dungeon entrance',
-        rarity: Rarity.Unknown,
+        rarity: Rarity.Gold,
         permanent: true,
         ethereal: true,
+        limit: 1,
     },
 ];
