@@ -11,7 +11,10 @@ type DeckStore = {
 const useDeck = create<DeckStore>((set) => ({
     deck: [],
     addCard: (card: Card) =>
-        set((state: DeckStore) => ({ deck: [...state.deck, card] })),
+        set((state: DeckStore) => {
+            if (state.deck.length >= 40) return {};
+            return { deck: [...state.deck, card] };
+        }),
     removeCard: (card: Card) =>
         set((state: DeckStore) => {
             const indexToRemove = state.deck.indexOf(card);

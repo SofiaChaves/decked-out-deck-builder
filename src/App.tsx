@@ -34,19 +34,22 @@ function App() {
                         </div>
 
                         <div className="space-y-5">
-                            <div className="flex items-end justify-between gap-5">
-                                <h1 className="text-3xl font-bold">
-                                    Your Deck
-                                </h1>
-                                {deck.length > 0 && (
+                            <h1 className="text-3xl font-bold">Your Deck</h1>
+                            {deck.length > 0 && (
+                                <div className="flex items-end justify-between w-full gap-5">
+                                    <span className="text-slate-400">
+                                        {deck.length < 40
+                                            ? `${deck.length}/40 Cards in the deck`
+                                            : `Achieved maximum cards per deck`}
+                                    </span>
                                     <button
                                         onClick={clearDeck}
                                         className="underline text-slate-500"
                                     >
                                         Clear Deck
                                     </button>
-                                )}
-                            </div>
+                                </div>
+                            )}
 
                             <Deck />
                         </div>
