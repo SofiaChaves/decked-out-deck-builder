@@ -13,7 +13,10 @@ const CardsList = () => {
                     onClick={() => addCard(card)}
                 >
                     <Card card={card}>
-                        <p className="text-sm text-slate-400 dark:text-slate-500 line-clamp-2">
+                        <p
+                            className="text-sm text-slate-400 dark:text-slate-500 line-clamp-3"
+                            title={card.description}
+                        >
                             {card.description}
                         </p>
                     </Card>

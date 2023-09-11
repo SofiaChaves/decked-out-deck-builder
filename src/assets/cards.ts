@@ -105,7 +105,7 @@ export const cards: Card[] = [
     {
         name: 'Nimble Looting',
         description:
-            'Blocks 1 Clank, Generates 2 Treasure. Until Clank increases, each clanked blocked generates 2 Treasure..',
+            'Blocks 1 Clank, Generates 2 Treasure. Until Clank increases, each clanked blocked generates 2 Treasure.',
         rarity: Rarity.Uncommon,
         clank: 1,
         treasure: 2,
