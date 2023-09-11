@@ -35,8 +35,8 @@ const raritiesClassNames = {
         text: 'text-amber-700',
         background: 'bg-amber-200',
     },
-    [Rarity.Unknown]: {
-        text: 'text-slate-700',
-        background: 'bg-slate-200',
+    [Rarity.Gold]: {
+        text: 'text-yellow-700',
+        background: 'bg-yellow-200',
     },
 };

@@ -1,4 +1,3 @@
-import useDeck from '../hooks/useDeck';
 import { Card } from '../types/Card';
 import { Rarity } from '../types/Rarity';
 import Badge from './Badge';
