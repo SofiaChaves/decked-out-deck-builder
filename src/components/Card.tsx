@@ -19,7 +19,7 @@ const Card = ({ card, children }: Props) => {
         >
             <div className="flex flex-wrap items-center justify-between gap-2">
                 <h2 className={`font-bold text-left ${rarityClasses.text}`}>
-                    {card.name}
+                    {card.name} ({card.limit})
                 </h2>
 
                 <div className="flex items-center gap-1.5 text-xs min-w-fit">
@@ -92,12 +92,12 @@ const raritiesClasses = {
     [Rarity.Rare]: {
         text: 'text-blue-400',
         border: 'border-blue-500/60',
-        background: 'bg-blue-200/5 dark:bg-blue-600/10',
+        background: 'bg-blue-200/20 dark:bg-blue-600/10',
     },
     [Rarity.Legendary]: {
         text: 'text-purple-400',
         border: 'border-purple-500/60',
-        background: 'bg-purple-200/5 dark:bg-purple-600/10',
+        background: 'bg-purple-200/20 dark:bg-purple-600/10',
     },
     [Rarity.Gold]: {
         text: 'text-amber-400',
