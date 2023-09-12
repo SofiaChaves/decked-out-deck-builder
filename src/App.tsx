@@ -72,7 +72,7 @@ function App() {
                     <span>
                         Support this project by giving it a ⭐ on{' '}
                         <a
-                            href="https://github.com/SofiaChaves"
+                            href="https://github.com/SofiaChaves/decked-out-deck-builder"
                             className="underline text-slate-500"
                         >
                             GitHub
