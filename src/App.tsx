@@ -64,6 +64,7 @@ function App() {
                         Find me on{' '}
                         <a
                             href="https://www.linkedin.com/in/sofiacps/"
+                            target="_blank"
                             className="underline text-slate-500"
                         >
                             LinkedIn
@@ -73,6 +74,7 @@ function App() {
                         Support this project by giving it a ⭐ on{' '}
                         <a
                             href="https://github.com/SofiaChaves/decked-out-deck-builder"
+                            target="_blank"
                             className="underline text-slate-500"
                         >
                             GitHub
