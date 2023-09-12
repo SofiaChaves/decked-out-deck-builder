@@ -31,10 +31,10 @@ const DeckStats = () => {
         <section className="space-y-3">
             {/* Treasure */}
             <article className="space-y-1.5 ">
-                <h3 className="font-bold">
-                    Treasure
-                    <span className="pl-2 text-slate-500">{totalTreasure}</span>
-                </h3>
+                <div className="flex gap-3">
+                    <h3 className="font-bold">Treasure</h3>
+                    <span className="text-slate-400">{totalTreasure}</span>
+                </div>
                 <div className="flex flex-wrap gap-1">
                     {[...Array(totalTreasure).keys()].map((_) => (
                         <Treasure key={_} />
@@ -44,10 +44,10 @@ const DeckStats = () => {
 
             {/* Ember */}
             <article className="space-y-1.5 ">
-                <h3 className="font-bold">
-                    Embers
-                    <span className="pl-2 text-slate-500">{totalEmbers}</span>
-                </h3>
+                <div className="flex gap-3">
+                    <h3 className="font-bold">Frost Embers</h3>
+                    <span className="text-slate-400">{totalEmbers}</span>
+                </div>
                 <div className="flex flex-wrap gap-1">
                     {[...Array(totalEmbers).keys()].map((_) => (
                         <Ember key={_} />
@@ -57,10 +57,10 @@ const DeckStats = () => {
 
             {/* Hazard */}
             <article className="space-y-1.5">
-                <h3 className="font-bold">
-                    Blocked Hazard
-                    <span className="pl-2 text-slate-500">{totalHazard}</span>
-                </h3>
+                <div className="flex gap-3">
+                    <h3 className="font-bold">Blocked Hazard</h3>
+                    <span className="text-slate-400">{totalHazard}</span>
+                </div>
                 <div className="flex flex-wrap gap-1">
                     {[...Array(Math.abs(totalHazard)).keys()].map((_) => (
                         <Hazard key={_} filled={totalHazard > 0} />
@@ -70,10 +70,10 @@ const DeckStats = () => {
 
             {/* Clank */}
             <article className="space-y-1.5">
-                <h3 className="font-bold">
-                    Blocked Clank
-                    <span className="pl-2 text-slate-500">{totalClank}</span>
-                </h3>
+                <div className="flex gap-3">
+                    <h3 className="font-bold">Blocked Clank</h3>
+                    <span className="text-slate-400">{totalClank}</span>
+                </div>
                 <div className="flex flex-wrap gap-1">
                     {[...Array(Math.abs(totalClank)).keys()].map((_) => (
                         <Clank key={_} filled={totalClank > 0} />

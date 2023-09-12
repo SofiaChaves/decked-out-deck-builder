@@ -1,5 +1,5 @@
 import useDeck from '../hooks/useDeck';
-import Card from './Card';
+import CardPreview from './CardPreview';
 
 const Deck = () => {
     const deck = useDeck((state) => state.deck);
@@ -13,7 +13,7 @@ const Deck = () => {
                     key={card.name + index}
                     onClick={() => removeCard(card)}
                 >
-                    <Card key={card.name + index} card={card} />
+                    <CardPreview key={card.name + index} card={card} />
                 </button>
             ))}
             {deck.length === 0 && (

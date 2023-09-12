@@ -8,22 +8,38 @@ import Treasure from './Treasure';
 
 type Props = {
     card: Card;
-    children?: React.ReactNode;
 };
-const Card = ({ card, children }: Props) => {
+const CardPreview = ({ card }: Props) => {
     const rarityClasses = raritiesClasses[card.rarity];
 
     return (
         <article
-            className={`space-y-2.5 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform select-none hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
+            className={`flex flex-wrap items-center justify-between gap-2.5 border-2 py-3 px-4 h-full rounded-lg scale-100 transition-transform select-none hover:scale-105 ${rarityClasses.border} ${rarityClasses.background}`}
         >
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex gap-2.5">
                 <h2 className={`font-bold text-left ${rarityClasses.text}`}>
                     {card.name}
                 </h2>
-                <span className="text-sm text-slate-400 whitespace-nowrap">
-                    max {card.limit}
-                </span>
+                {(card.permanent || card.ethereal) && (
+                    <div className="flex gap-1.5">
+                        {card.permanent && (
+                            <Badge
+                                backgroundColor="bg-yellow-500/30"
+                                textColor="text-yellow-700 dark:text-yellow-400"
+                            >
+                                Permanent
+                            </Badge>
+                        )}
+                        {card.ethereal && (
+                            <Badge
+                                backgroundColor="bg-pink-500/30"
+                                textColor="text-pink-600 dark:text-pink-400"
+                            >
+                                Ethereal
+                            </Badge>
+                        )}
+                    </div>
+                )}
             </div>
 
             {(card.clank || card.ember || card.hazard || card.treasure) && (
@@ -56,32 +72,10 @@ const Card = ({ card, children }: Props) => {
                     )}
                 </div>
             )}
-
-            {(card.permanent || card.ethereal) && (
-                <div className="flex gap-1.5">
-                    {card.permanent && (
-                        <Badge
-                            backgroundColor="bg-yellow-500/30"
-                            textColor="text-yellow-700 dark:text-yellow-400"
-                        >
-                            Permanent
-                        </Badge>
-                    )}
-                    {card.ethereal && (
-                        <Badge
-                            backgroundColor="bg-pink-500/30"
-                            textColor="text-pink-600 dark:text-pink-400"
-                        >
-                            Ethereal
-                        </Badge>
-                    )}
-                </div>
-            )}
-            {children}
         </article>
     );
 };
-export default Card;
+export default CardPreview;
 
 const raritiesClasses = {
     [Rarity.Common]: {
