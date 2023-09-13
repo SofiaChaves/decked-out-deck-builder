@@ -20,21 +20,21 @@ function App() {
                 <div className="grid gap-16 md:grid-cols-3">
                     {/* List */}
                     <div className="space-y-5 md:col-span-2">
-                        <h1 className="text-2xl font-bold">All Cards</h1>
+                        <h2 className="text-2xl font-bold">All Cards</h2>
                         <CardsList />
                     </div>
 
                     {/* Deck */}
                     <div className="order-first space-y-12 md:order-last">
                         <div className="space-y-5">
-                            <h1 className="text-2xl font-bold">
+                            <h2 className="text-2xl font-bold">
                                 Your Deck Stats
-                            </h1>
+                            </h2>
                             <DeckStats />
                         </div>
 
                         <div className="space-y-5">
-                            <h1 className="text-3xl font-bold">Your Deck</h1>
+                            <h2 className="text-3xl font-bold">Your Deck</h2>
                             {deck.length > 0 && (
                                 <div className="flex items-end justify-between w-full gap-5">
                                     <span className="text-slate-400">
