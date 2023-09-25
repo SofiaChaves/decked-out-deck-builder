@@ -1,27 +1,52 @@
-# React + TypeScript + Vite
+# Decked Out 2 - Deck Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Decked Out 2 Deck Builder is a web application that allows players of the popular Minecraft game "Decked Out 2" on the HermitCraft server to optimize their card decks for dungeon runs. This project is built using React, Vite, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started with the project, follow these instructions:
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clone the repository**
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+2. **Navigate to the project folder:**
+```
+cd decked-out-deck-builder
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. **Install dependencies:**
+```
+npm install
+```
+
+4. **Start the development server:**
+```
+npm run dev
+```
+
+
+The application should now be running locally at `http://localhost:3000`.
+
+## Features
+
+- Create and manage card decks for "Decked Out 2" Minecraft dungeons.
+- Optimize card combinations for successful dungeon runs.
+- User-friendly interface for adding, removing, and editing cards in your deck.
+- Real-time preview of your deck's effectiveness.
+- Save and load decks for future reference.
+- Responsive design for use on desktop and mobile devices.
+
+## Tech Stack
+
+- **React:** A popular JavaScript library for building user interfaces.
+- **Vite:** A fast build tool and development environment for modern web apps.
+- **TypeScript:** A statically typed superset of JavaScript for enhanced code quality and maintainability.
+- **Tailwind CSS:** A utility-first CSS framework for building custom designs quickly.
+
+This will launch the application in development mode, and you can access it in your web browser at `http://localhost:3000`.
+
